@@ -47,6 +47,13 @@ Cypress.Commands.add('clicksubmit', function () {
   cy.get('button[type="submit"]').click()
 
 })
+Cypress.Commands.add('acess_bugereats', function () {
+
+  cy.visit('https://buger-eats-qa.vercel.app/');
+  cy.get('a[href="/deliver"]').click()
+  cy.contains('Cadastre-se para fazer entregas').should('be.visible')
+
+})
 
 Cypress.Commands.add('uploadfile', function () {
 

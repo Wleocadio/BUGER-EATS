@@ -3,7 +3,18 @@
 import signupFactory from '../factories/SignupFactory'
 
 
-describe('Testando o sistema Buger Eats', () => {
+
+describe('Verificando o sistema Buger Eats', () => {
+  it('Acessar o sistema clicando em "cadastre-se para fazer entrega"', () => {
+
+    cy.acess_bugereats()
+
+  });
+
+});
+
+
+describe('Cadastro no sistema Buger Eats', () => {
   
 
   beforeEach(() => {
@@ -11,13 +22,7 @@ describe('Testando o sistema Buger Eats', () => {
 
   });
 
-  it('Acessar o sistema clicando em "cadastre-se para fazer entrega"', () => {
-
-    cy.visit('https://buger-eats-qa.vercel.app/');
-    cy.get('a[href="/deliver"]').click()
-    cy.contains('Cadastre-se para fazer entregas').should('be.visible')
-
-  });
+  
 
   it('Verifica Alerta de campos obrigatórios', () => {
 
