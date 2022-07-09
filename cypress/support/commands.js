@@ -58,7 +58,7 @@ Cypress.Commands.add('acess_bugereats', function () {
 Cypress.Commands.add('uploadfile', function () {
 
   cy.get('input[accept^="image"]').should('exist')
-    .selectFile('cypress/fixtures/images/cnh.jpg', { force: true })
+    .selectFile({contents:'cypress/fixtures/images/cnh.jpg'}, { force: true })
     .should(function ($input) {
       expect($input[0].files[0].name).to.equal('cnh.jpg')
 
