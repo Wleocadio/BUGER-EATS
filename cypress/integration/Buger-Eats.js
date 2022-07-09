@@ -91,7 +91,7 @@ describe('Cadastro no sistema Buger Eats', () => {
     cy.delivery_method()
 
   });
-  it('Selecionar um arquivo', () => {
+  it.only('Selecionar um arquivo', () => {
 
     cy.uploadfile()
 
