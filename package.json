@@ -1,7 +1,7 @@
 {
   "name": "testando-buger-eats",
   "version": "1.0.0",
-  "description": "Testando o Sistema Buger Eats",
+  "description": "Projeto de teste de aceitação do app Buger Eats",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
