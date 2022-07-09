@@ -1,3 +1,0 @@
-{
-projectId: "d38ayp"
-}
