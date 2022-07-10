@@ -13,16 +13,13 @@ describe('Verificando o sistema Buger Eats', () => {
 
 });
 
-
 describe('Cadastro no sistema Buger Eats', () => {
-  
 
   beforeEach(() => {
     cy.visit('https://buger-eats-qa.vercel.app/deliver')
 
   });
 
-  
 
   it('Verifica Alerta de campos obrigatórios', () => {
 
@@ -50,7 +47,7 @@ describe('Cadastro no sistema Buger Eats', () => {
     cy.delivery_methodM()
     cy.uploadfile()
     cy.clicksubmit()
-    
+
     cy.get('.alert-error').should('be.visible').contains('Oops! Email com formato inválido').should('be.visible')
 
   });
@@ -103,14 +100,14 @@ describe('Cadastro no sistema Buger Eats', () => {
     cy.delivery_methodM()
     cy.uploadfile()
     cy.clicksubmit()
-    
+
     cy.success_registration()
     cy.contains('Seja um parceiro entregador pela Buger Eats').should('be.visible')
 
   });
 
   it('Realizar o cadastro selecionando o método de entrega Bicicleta', () => {
-    
+
     var deliver = signupFactory.deliver()
     cy.signup(deliver)
     cy.delivery_methodB()
